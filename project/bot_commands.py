@@ -73,5 +73,6 @@ def check_message(message):
         return handle_command(message, command)
 
     for greeting in greetings:
-        if greeting in message.content and "gost" in message.content:
+        low = message.content.lower()
+        if greeting in low and "gost" in low:
             return greet(message)

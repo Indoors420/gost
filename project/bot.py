@@ -26,6 +26,7 @@ async def on_message(message):
 
     new_msg = bot_commands.check_message(message)
     if new_msg != None:
+        print(f"Guilds: {client.guilds}")
         print(f"{message.author} : {message.content}")
         await reply_message(message, new_msg)
 
