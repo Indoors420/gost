@@ -59,7 +59,7 @@ def check_command(message):
             return (command[command_name]["function"], kwargs)
 
 
-# Executes commanmd funcions and returns responses
+# Returns command function call with arguments
 def handle_command(message, command):
     function = command[0]
     kwargs = command[1]
