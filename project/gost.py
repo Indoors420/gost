@@ -56,7 +56,10 @@ async def price(ctx):
     else:
         try:
             float(args[0])
-            ctx.message.reply("?")
+            try:
+                await ctx.message.reply("?")
+            except Exception as err:
+                stamped_print(f"ERROR: {err}")
         except:
             base = args[0]
             quote = "USD"
