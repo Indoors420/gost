@@ -35,6 +35,13 @@ async def price(ctx):
     cmd = ctx.message.content.lower().replace("!price", "")
     args = re.split("\s+", cmd)
     args.pop(0)  # re.split leaves empty item at front
+
+    # zo smokes mid
+    if ctx.author.id == 802693615260270622:
+        if random.randint(0, 10) > 5:
+            ctx.message.reply("this guy smokes mid😂")
+            return
+
     if len(args) < 1:
         try:
             await ctx.message.reply("?")
