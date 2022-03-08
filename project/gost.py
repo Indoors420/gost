@@ -38,8 +38,8 @@ async def price(ctx):
 
     # zo smokes mid
     if ctx.author.id == 802693615260270622:
-        if random.randint(0, 10) > 5:
-            ctx.message.reply("this guy smokes mid😂")
+        if random.randint(0, 10) > 3:
+            await ctx.message.reply("this guy smokes mid😂")
             return
 
     if len(args) < 1:
